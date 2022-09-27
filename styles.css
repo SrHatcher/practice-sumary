@@ -1,0 +1,181 @@
+:root{
+    --background: hsl(225, 100%, 94%);
+    --primary-color: hsl(245, 75%, 52%);
+    --secondary-color: hsl(225, 100%, 98%);
+    --text-color:hsl(224, 23%, 55%);
+    --title-color:hsl(223, 47%, 23%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    font-size: 1.6rem;
+
+    background-color: var(--background);
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2.7fr 0.3fr 1fr 0.2fr 1fr 0.3fr 1.3fr 0.3fr 1fr 1fr 0.3fr;
+
+    min-width: 35rem;
+    max-width: 40rem;
+    height: 60rem;
+    margin: 0 2rem;
+
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+
+    background-color: white;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+}
+
+.hero > img{
+    height: 100%;
+    object-fit: cover;
+}
+
+main > h1{
+    grid-row: 3;
+    align-self: center;
+
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 900;
+
+    color: var(--title-color);
+}
+
+main > p{
+    grid-row: 5;
+
+    padding: 0 4.5rem;
+
+    text-align: center;
+
+    color: var(--text-color);
+}
+
+.order{
+    grid-row: 7;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr 1fr;
+
+    margin: 0 4.5rem;
+
+    background-color: var(--secondary-color);
+    border-radius: 1.2rem;
+}
+
+.order__music_Icon{
+    align-self: center;
+    justify-self: center;
+
+    width: 5rem;
+    height: 5rem;
+
+    background-image: url("./images/icon-music.svg");
+    background-repeat: no-repeat;
+    background-size: 5rem 5rem;
+    background-position: center;
+}
+
+.order > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 1rem;
+}
+
+.order > div > h2{
+    font-size: 1.4rem;
+    font-weight: 900;
+
+    color: var(--title-color);
+}
+
+.order > div > span{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    color: var(--text-color)
+}
+
+.order__change{
+    align-self: center;
+
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all ease-out 0.15s;
+}
+
+
+
+.payment-button{
+    grid-row: 9;
+    justify-self: center;
+    align-self: center;
+
+    width: 80%;
+    height: 90%;
+
+    font-weight: 900;
+
+    border: none;
+    border-radius: 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0.8rem 3rem 0.2rem hsla(245, 75%, 52%, 0.37);
+    cursor: pointer;
+    transition: all ease-out 0.15s;
+}
+
+
+main > span{
+    grid-row: 10;
+    justify-self: center;
+    align-self: center;
+
+    font-weight: 900;
+
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+}
+
+@media (hover:hover){
+    .order__change:hover{
+        text-decoration: none;
+    
+        color: hsl(261, 80%, 57%);
+    }
+
+    .payment-button:hover{
+        background-color: hsl(261, 80%, 57%);
+    }
+    
+
+    main > span:hover{
+        color: var(--title-color);
+    }
+}
